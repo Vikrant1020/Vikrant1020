@@ -39,7 +39,16 @@ const projectsData = {
         solution: "Built CI/CD pipeline with AWS CodePipeline, deployed frontend on AWS Amplify and backend on ECS with automated scanning and testing.",
         impact: "Achieved zero-downtime deployments with complete automation from code commit to production.",
         technologies: ["AWS CodePipeline", "Amplify", "ECS", "CloudFormation"]
+    },
+    project6: {
+        title: "Azure Tenant Migration & Infrastructure Transfer",
+        tag: "Azure",
+        challenge: "Migrate complex Azure subscriptions, DevOps projects, and production workloads from legacy tenant to new organizational tenant without service disruption or data loss.",
+        solution: "Developed comprehensive migration strategy using PowerShell automation scripts, Azure Resource Mover, and Azure DevOps REST APIs. Created detailed inventory of resources, established parallel infrastructure in target tenant, implemented phased migration with rollback procedures, and automated repository transfers with build/release pipeline reconstruction.",
+        impact: "Successfully migrated 15+ Azure subscriptions and 50+ DevOps projects with 99.9% uptime. Reduced migration time by 60% through automation, maintained all Git history and work items, and zero data loss across the entire migration process.",
+        technologies: ["Azure DevOps", "PowerShell", "Azure Resource Mover", "ARM Templates", "Azure CLI", "REST APIs"]
     }
+
 };
 
 // Project Modal functions
