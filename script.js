@@ -1,8 +1,99 @@
-// Modal functions
-function openCertModal() {
+// Project data
+const projectsData = {
+    project1: {
+        title: "Carbon Emissions Analysis Platform",
+        tag: "Azure",
+        challenge: "Build a serverless platform for analyzing carbon emissions with automated data processing and ML-driven recommendations.",
+        solution: "Designed end-to-end Azure infrastructure with Static Web Apps, Azure Functions, Container Apps, Databricks, and Data Factory for automated database updates.",
+        impact: "Delivered secure CI/CD pipeline with SonarQube integration and automated test execution, enabling real-time emissions analysis.",
+        technologies: ["Azure DevOps", "Azure Functions", "Databricks", "Data Factory", "Container Apps"]
+    },
+    project2: {
+        title: "Truck Parking Booking Application",
+        tag: "Azure",
+        challenge: "Develop a serverless web and mobile platform for truck drivers to find and book parking spots.",
+        solution: "Implemented automated CI/CD pipelines, deployed frontend on Azure Static Web Apps and backend on Container Apps, integrated Azure Communication Services for email/SMS.",
+        impact: "Achieved seamless deployment automation with comprehensive scanning, building, and testing workflows.",
+        technologies: ["Azure DevOps", "Static Web Apps", "Container Apps", "Communication Services"]
+    },
+    project3: {
+        title: "Site Reliability Engineering Initiative",
+        tag: "AWS",
+        challenge: "Establish comprehensive monitoring and automation for AWS infrastructure with proactive incident management.",
+        solution: "Implemented monitoring using New Relic and PagerDuty, automated Jenkins jobs, established daily reporting and escalation procedures.",
+        impact: "Reduced MTTR by 50% through proactive monitoring and automated alerting systems.",
+        technologies: ["AWS", "Jenkins", "New Relic", "PagerDuty"]
+    },
+    project4: {
+        title: "Dating Platform Backend",
+        tag: "Python/Django",
+        challenge: "Build scalable Django API backend with third-party integrations for mobile dating application.",
+        solution: "Integrated AWS Rekognition for photo filtering, Sendinblue for notifications, Google Play Store API for payments, leveraged S3 for media storage.",
+        impact: "Reduced server load by 70% through S3 offloading and optimized API performance for mobile clients.",
+        technologies: ["Django", "AWS Rekognition", "S3", "API Integration"]
+    },
+    project5: {
+        title: "Dog Club Training Platform",
+        tag: "AWS",
+        challenge: "Create serverless infrastructure for dog training club with automated deployments.",
+        solution: "Built CI/CD pipeline with AWS CodePipeline, deployed frontend on AWS Amplify and backend on ECS with automated scanning and testing.",
+        impact: "Achieved zero-downtime deployments with complete automation from code commit to production.",
+        technologies: ["AWS CodePipeline", "Amplify", "ECS", "CloudFormation"]
+    }
+};
+
+// Project Modal functions
+window.openProjectModal = function(projectId) {
+    const modal = document.getElementById('projectModal');
+    const detailsContainer = document.getElementById('projectDetails');
+    const project = projectsData[projectId];
+    
+    if (!project) return;
+    
+    const techTags = project.technologies.map(tech => `<span>${tech}</span>`).join('');
+    
+    detailsContainer.innerHTML = `
+        <div class="project-modal-header">
+            <h2>${project.title}</h2>
+            <span class="project-tag">${project.tag}</span>
+        </div>
+        <div class="project-modal-body">
+            <div class="project-section">
+                <h4>Challenge</h4>
+                <p>${project.challenge}</p>
+            </div>
+            <div class="project-section">
+                <h4>Solution</h4>
+                <p>${project.solution}</p>
+            </div>
+            <div class="project-section">
+                <h4>Impact</h4>
+                <p>${project.impact}</p>
+            </div>
+        </div>
+        <div class="project-modal-tech">
+            ${techTags}
+        </div>
+    `;
+    
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+window.closeProjectModal = function(event) {
+    const modal = document.getElementById('projectModal');
+    
+    if (!event || event.target === modal || event.target.classList.contains('modal-close')) {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+}
+
+// Certificate Modal functions
+window.openCertModal = function() {
     const modal = document.getElementById('certModal');
     const certImage = document.getElementById('certImage');
-    const currentTheme = html.getAttribute('data-theme') || 'light';
+    const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
     
     // Set the appropriate certificate image based on theme
     if (window.certImages) {
@@ -13,7 +104,7 @@ function openCertModal() {
     document.body.style.overflow = 'hidden';
 }
 
-function closeCertModal(event) {
+window.closeCertModal = function(event) {
     const modal = document.getElementById('certModal');
     
     // Only close if clicking the backdrop or close button
@@ -23,10 +114,11 @@ function closeCertModal(event) {
     }
 }
 
-// Close modal on ESC key
+// Close modals on ESC key
 document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
-        closeCertModal();
+        window.closeCertModal();
+        window.closeProjectModal();
     }
 });
 
@@ -34,8 +126,8 @@ document.addEventListener('keydown', (e) => {
 const themeToggle = document.getElementById('themeToggle');
 const html = document.documentElement;
 
-// Check for saved theme preference or default to 'light'
-const currentTheme = localStorage.getItem('theme') || 'light';
+// Check for saved theme preference or default to 'dark'
+const currentTheme = localStorage.getItem('theme') || 'dark';
 html.setAttribute('data-theme', currentTheme);
 
 themeToggle.addEventListener('click', () => {
@@ -132,7 +224,7 @@ const observer = new IntersectionObserver((entries) => {
 
 // Observe elements for animation
 const animateElements = document.querySelectorAll(
-    '.section-header, .about-content, .skill-category, .timeline-item, .project-card, .cert-card, .education-item, .contact-content'
+    '.section-header, .about-content, .skill-category, .timeline-item, .project-card, .cert-card, .plan-card, .education-item, .contact-content'
 );
 
 animateElements.forEach(el => {

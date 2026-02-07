@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Vikrant - DevOps Engineer with 4+ years of experience in AWS, Azure, Kubernetes, and CI/CD automation">
-    <meta name="keywords" content="DevOps Engineer, AWS, Azure, Kubernetes, Docker, Terraform, Monitoring, CI/CD">
+    <meta name="keywords" content="DevOps Engineer, AWS, Azure, Kubernetes, Docker, Terraform, CI/CD">
     <meta name="author" content="Vikrant">
     <title>Vikrant | DevOps Engineer</title>
     <link rel="stylesheet" href="styles.css">
@@ -16,7 +16,7 @@
     <!-- Navigation -->
     <nav class="nav" id="nav">
         <div class="nav-container">
-            <a href="#hero" class="nav-logo">VIKRANT</a>
+            <a href="#hero" class="nav-logo">VK</a>
             <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
                 <svg class="sun-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="10" cy="10" r="3" stroke="currentColor" stroke-width="1.5"/>
@@ -98,13 +98,13 @@
                             <span>Azure</span>
                         </div>
                         <div class="tech-icon" title="Kubernetes">
-                            <span>Monitoring</span>
+                            <span>K8s</span>
                         </div>
                         <div class="tech-icon" title="Docker">
                             <span>Docker</span>
                         </div>
                         <div class="tech-icon" title="Terraform">
-                            <span>Terraform</span>
+                            <span>TF</span>
                         </div>
                         <div class="tech-icon" title="Python">
                             <span>Python</span>
@@ -325,99 +325,96 @@
                 <h2 class="section-title">Key Projects</h2>
             </div>
             <div class="projects-grid">
-                <article class="project-card">
+                <article class="project-card" onclick="openProjectModal('project1')">
                     <div class="project-header">
                         <h3>Carbon Emissions Analysis Platform</h3>
                         <span class="project-tag">Azure</span>
                     </div>
-                    <div class="project-body">
-                        <p class="project-challenge"><strong>Challenge:</strong> Build a serverless platform for analyzing carbon emissions with automated data processing and ML-driven recommendations.</p>
-                        <p class="project-solution"><strong>Solution:</strong> Designed end-to-end Azure infrastructure with Static Web Apps, Azure Functions, Container Apps, Databricks, and Data Factory for automated database updates.</p>
-                        <p class="project-impact"><strong>Impact:</strong> Delivered secure CI/CD pipeline with SonarQube integration and automated test execution, enabling real-time emissions analysis.</p>
+                    <div class="project-preview">
+                        <p>Built serverless platform for analyzing carbon emissions with automated data processing and ML-driven recommendations.</p>
+                        <div class="project-tech-preview">
+                            <span>Azure DevOps</span>
+                            <span>Databricks</span>
+                            <span>+3 more</span>
+                        </div>
                     </div>
-                    <div class="project-tech">
-                        <span>Azure DevOps</span>
-                        <span>Azure Functions</span>
-                        <span>Databricks</span>
-                        <span>Data Factory</span>
-                        <span>Container Apps</span>
-                    </div>
+                    <span class="project-action">Click to view details →</span>
                 </article>
 
-                <article class="project-card">
+                <article class="project-card" onclick="openProjectModal('project2')">
                     <div class="project-header">
                         <h3>Truck Parking Booking Application</h3>
                         <span class="project-tag">Azure</span>
                     </div>
-                    <div class="project-body">
-                        <p class="project-challenge"><strong>Challenge:</strong> Develop a serverless web and mobile platform for truck drivers to find and book parking spots.</p>
-                        <p class="project-solution"><strong>Solution:</strong> Implemented automated CI/CD pipelines, deployed frontend on Azure Static Web Apps and backend on Container Apps, integrated Azure Communication Services for email/SMS.</p>
-                        <p class="project-impact"><strong>Impact:</strong> Achieved seamless deployment automation with comprehensive scanning, building, and testing workflows.</p>
+                    <div class="project-preview">
+                        <p>Developed serverless web and mobile platform for truck drivers to find and book parking spots.</p>
+                        <div class="project-tech-preview">
+                            <span>Azure DevOps</span>
+                            <span>Static Web Apps</span>
+                            <span>+2 more</span>
+                        </div>
                     </div>
-                    <div class="project-tech">
-                        <span>Azure DevOps</span>
-                        <span>Static Web Apps</span>
-                        <span>Container Apps</span>
-                        <span>Communication Services</span>
-                    </div>
+                    <span class="project-action">Click to view details →</span>
                 </article>
 
-                <article class="project-card">
+                <article class="project-card" onclick="openProjectModal('project3')">
                     <div class="project-header">
                         <h3>Site Reliability Engineering Initiative</h3>
                         <span class="project-tag">AWS</span>
                     </div>
-                    <div class="project-body">
-                        <p class="project-challenge"><strong>Challenge:</strong> Establish comprehensive monitoring and automation for AWS infrastructure with proactive incident management.</p>
-                        <p class="project-solution"><strong>Solution:</strong> Implemented monitoring using New Relic and PagerDuty, automated Jenkins jobs, established daily reporting and escalation procedures.</p>
-                        <p class="project-impact"><strong>Impact:</strong> Reduced MTTR by 50% through proactive monitoring and automated alerting systems.</p>
+                    <div class="project-preview">
+                        <p>Established comprehensive monitoring and automation for AWS infrastructure with proactive incident management.</p>
+                        <div class="project-tech-preview">
+                            <span>AWS</span>
+                            <span>Jenkins</span>
+                            <span>+2 more</span>
+                        </div>
                     </div>
-                    <div class="project-tech">
-                        <span>AWS</span>
-                        <span>Jenkins</span>
-                        <span>New Relic</span>
-                        <span>PagerDuty</span>
-                    </div>
+                    <span class="project-action">Click to view details →</span>
                 </article>
 
-                <article class="project-card">
+                <article class="project-card" onclick="openProjectModal('project4')">
                     <div class="project-header">
                         <h3>Dating Platform Backend</h3>
                         <span class="project-tag">Python/Django</span>
                     </div>
-                    <div class="project-body">
-                        <p class="project-challenge"><strong>Challenge:</strong> Build scalable Django API backend with third-party integrations for mobile dating application.</p>
-                        <p class="project-solution"><strong>Solution:</strong> Integrated AWS Rekognition for photo filtering, Sendinblue for notifications, Google Play Store API for payments, leveraged S3 for media storage.</p>
-                        <p class="project-impact"><strong>Impact:</strong> Reduced server load by 70% through S3 offloading and optimized API performance for mobile clients.</p>
+                    <div class="project-preview">
+                        <p>Built scalable Django API backend with third-party integrations for mobile dating application.</p>
+                        <div class="project-tech-preview">
+                            <span>Django</span>
+                            <span>AWS Rekognition</span>
+                            <span>+2 more</span>
+                        </div>
                     </div>
-                    <div class="project-tech">
-                        <span>Django</span>
-                        <span>AWS Rekognition</span>
-                        <span>S3</span>
-                        <span>API Integration</span>
-                    </div>
+                    <span class="project-action">Click to view details →</span>
                 </article>
 
-                <article class="project-card">
+                <article class="project-card" onclick="openProjectModal('project5')">
                     <div class="project-header">
                         <h3>Dog Club Training Platform</h3>
                         <span class="project-tag">AWS</span>
                     </div>
-                    <div class="project-body">
-                        <p class="project-challenge"><strong>Challenge:</strong> Create serverless infrastructure for dog training club with automated deployments.</p>
-                        <p class="project-solution"><strong>Solution:</strong> Built CI/CD pipeline with AWS CodePipeline, deployed frontend on AWS Amplify and backend on ECS with automated scanning and testing.</p>
-                        <p class="project-impact"><strong>Impact:</strong> Achieved zero-downtime deployments with complete automation from code commit to production.</p>
+                    <div class="project-preview">
+                        <p>Created serverless infrastructure for dog training club with automated deployments.</p>
+                        <div class="project-tech-preview">
+                            <span>AWS CodePipeline</span>
+                            <span>Amplify</span>
+                            <span>+2 more</span>
+                        </div>
                     </div>
-                    <div class="project-tech">
-                        <span>AWS CodePipeline</span>
-                        <span>Amplify</span>
-                        <span>ECS</span>
-                        <span>CloudFormation</span>
-                    </div>
+                    <span class="project-action">Click to view details →</span>
                 </article>
             </div>
         </div>
     </section>
+
+    <!-- Project Modals -->
+    <div id="projectModal" class="modal" onclick="closeProjectModal(event)">
+        <div class="modal-content modal-project" onclick="event.stopPropagation()">
+            <button class="modal-close" onclick="closeProjectModal()">&times;</button>
+            <div id="projectDetails"></div>
+        </div>
+    </div>
 
     <!-- Certifications Section -->
     <section class="certifications" id="certifications">
@@ -453,6 +450,57 @@
         </div>
     </div>
 
+    <!-- Upcoming Plans Section -->
+    <section class="upcoming-plans" id="upcoming">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Future Goals</span>
+                <h2 class="section-title">Upcoming Plans</h2>
+            </div>
+            <div class="plans-grid">
+                <div class="plan-card">
+                    <div class="plan-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none">
+                            <path d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="plan-content">
+                        <h3>Azure Security Engineer AZ-500</h3>
+                        <p>Pursuing advanced Azure security certification to deepen expertise in cloud security architecture, identity management, and threat protection across Azure environments.</p>
+                        <span class="plan-status">In Progress</span>
+                    </div>
+                </div>
+
+                <div class="plan-card">
+                    <div class="plan-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none">
+                            <path d="M19 21V5C19 3.89543 18.1046 3 17 3H7C5.89543 3 5 3.89543 5 5V21M19 21H21M19 21H13M5 21H3M5 21H11M13 21V17C13 16.4477 12.5523 16 12 16H12C11.4477 16 11 16.4477 11 17V21M13 21H11" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M9 7H9.01M9 11H9.01M15 7H15.01M15 11H15.01" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="plan-content">
+                        <h3>Azure Solutions Architect Expert</h3>
+                        <p>Working towards achieving Solutions Architect certification to design and implement enterprise-scale solutions across compute, network, storage, and security.</p>
+                        <span class="plan-status">Planned</span>
+                    </div>
+                </div>
+
+                <div class="plan-card">
+                    <div class="plan-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none">
+                            <path d="M10 20L14 4M18 8L22 12L18 16M6 16L2 12L6 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="plan-content">
+                        <h3>Open Source DevOps Toolkit</h3>
+                        <p>Building a comprehensive open-source project featuring reusable Terraform modules, CI/CD templates, and monitoring configurations to help teams accelerate cloud adoption.</p>
+                        <span class="plan-status">In Development</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Education Section -->
     <section class="education" id="education">
         <div class="container">
@@ -481,7 +529,7 @@
                     <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision. Whether you need cloud infrastructure, CI/CD automation, or DevOps consulting, let's connect.</p>
                 </div>
                 <div class="contact-links">
-                    <a href="mailto:Vikrantt1020@gmail.com" class="contact-link">
+                    <a href="/cdn-cgi/l/email-protection#693f00021b08071d1d58595b59290e04080005470a0604" class="contact-link">
                         <div class="contact-icon">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                                 <path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -490,7 +538,7 @@
                         </div>
                         <div class="contact-info">
                             <span class="contact-label">Email</span>
-                            <span class="contact-value">Vikrantt1020@gmail.com</span>
+                            <span class="contact-value"><span class="__cf_email__" data-cfemail="43152a2831222d37377273717303242e222a2f6d202c2e">[email&#160;protected]</span></span>
                         </div>
                     </a>
                     <a href="https://www.linkedin.com/in/vikrant-devops/" target="_blank" rel="noopener noreferrer" class="contact-link">
@@ -515,12 +563,18 @@
                         <div class="contact-info">
                             <span class="contact-label">Phone</span>
                             <span class="contact-value">+91 83073-99011</span>
-                        </div>
                     </a>
                 </div>
-                </div>
+            </div>
         </div>
     </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Vikrant. Built with precision and purpose.</p>
+        </div>
+    </footer>
 
     <script src="certificates.js"></script>
     <script src="script.js"></script>
